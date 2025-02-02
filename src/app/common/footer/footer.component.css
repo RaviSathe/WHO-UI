@@ -1,0 +1,54 @@
+
+.fourth-nearby-gym-page img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin: 30px 0;
+}
+
+footer{
+    margin: 20px 0 0 0;
+    padding: 30px 125px;
+    background: #ebedf2;
+    height: 300px;
+}
+
+.foot-info-div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-part{
+    width: 15%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.foot-part .foot-opt{
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.name-nd-logo{
+    display: flex;
+}
+
+.foot-part-ext{
+    width: 32%;
+}
+
+.foot-part-ext input{
+    border: 1px solid grey;
+    padding: 2px;
+}
+
+.foot-part-ext small{
+    font-size: 13px;
+}
+
+.foot-sub{
+    display: flex;
+    margin: 10px 0;
+}

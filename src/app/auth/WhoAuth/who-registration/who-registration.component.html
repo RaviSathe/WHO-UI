@@ -1,0 +1,47 @@
+<div class="landing-header">
+    <div class="landing-header-left">
+        <!-- <div><img src="assets/logo.png" class="app-logo" alt="logo"></div> -->
+        <div class="app-name">WHO</div>
+    </div>
+    <div class="landing-header-right">
+        <button class="s-btn-white" routerLink="/WhoLogin">Login</button>
+        <!-- <button class="s-btn-grey" routerLink="/auth/user-signup">Sign up</button> -->
+    </div>
+</div>
+
+<div class="registration-first-page">
+    <div class="registration-left">
+        <div class="heading-name">Welcome to WHO Registration!</div>
+        <small>First thing first, lt set you up with an account</small><br>
+        <img src="assets/img/register-left-img.png" width="60%" alt="">
+    </div>
+    <div class="registration-right">
+        <h4>Let's Get Started</h4>
+        <div>Sign up ypur account</div>
+
+        <form class="form" [formGroup]="whoRegistrationForm">
+            <div class="input-tab">
+                <label for="Organization name">Organization name</label>
+                <input type="text" formControlName="organizationName">
+            </div>
+
+            <div class="input-tab">
+                <label for="Location">Location</label>
+                <input type="text" formControlName="location">
+            </div>
+
+            <div class="input-tab">
+                <label for="Email">Email</label>
+                <input type="email" formControlName="email">
+            </div>
+
+            <div class="input-tab">
+                <label for="Password">Password</label>
+                <input type="password" formControlName="password">
+            </div>
+
+            <button type="button" class="s-btn-grey" style="width: 100%;" (click)="registerWho()">Sign up</button>
+        </form>
+        <small style="font-weight: 500; margin: auto;">Have an account? Login</small>
+    </div>
+</div>

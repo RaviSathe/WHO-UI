@@ -1,0 +1,102 @@
+
+  <nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="cursor: pointer;" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">ADMIN</a>
+      <form class="d-flex" role="search">
+          <!-- <button type="button" style="margin-right: 10px;" class="btn btn-primary" (click)="getAllUsers('user')">Users</button>
+          <button type="button" style="margin-right: 10px;" class="btn btn-success" (click)="getAllUsers('who')">WHO</button> -->
+        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+        <button class="btn btn-outline-success" type="button" routerLink="whoRegistration">logOut</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- table------------- -->
+
+  <table class="table" *ngIf="getType === 'user'">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Email</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let data of allUsers; let i = index">
+        <th scope="row">{{ data.id }}</th>
+        <td>{{ data.firstname }}</td>
+        <td>{{ data.lastname }}</td>
+        <td>{{ data.email }}</td>
+        <td><button type="button" class="btn btn-danger" (click)="removeUser(data.id)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+  <table class="table" *ngIf="getType === 'who'">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Organization Name</th>
+        <th scope="col">Location</th>
+        <th scope="col">Email</th>
+        <th scope="col">Registration Date</th>
+        <th scope="col">Registration Number</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let data of allUsers; let i = index">
+        <th scope="row">{{ data.id }}</th>
+        <td>{{ data.organizationName }}</td>
+        <td>{{ data.location }}</td>
+        <td>{{ data.registrationDate }}</td>
+        <td>{{ data.registrationNo }}</td>
+        <td>{{ data.email }}</td>
+        <td><button type="button" class="btn btn-danger" (click)="removeWho(data.id)">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+  <!-- ==========Sidebar=========== -->
+  
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasExampleLabel">Welcome</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="side-menu-tab" (click)="getHomeMap()">Home</div>
+      <div class="side-menu-tab"  (click)="getAllUsers('user')">Users</div>
+      <div class="side-menu-tab" (click)="getAllUsers('who')">WHO</div>
+    </div>
+  </div>
+
+  <!-- =============== -->
+
+  <div  *ngIf="getType === ''">
+    <div class="map-div">
+      <img src="https://www.un.org/sites/un2.un.org/files/styles/large-article-image-style-16-9/public/field/image/1581027318.9191.png" alt="">
+    </div>
+    <div class="home">
+      <div class="mini-tabs">
+        <div>Total User</div>
+        <span>{{totalUser}}</span>
+      </div>
+      <div class="mini-tabs">
+        <div>Total WHO</div>
+        <span>{{totalwho}}</span>
+      </div>
+      <div class="mini-tabs">
+        <div>Total Item</div>
+      </div>
+      <div class="mini-tabs">
+        <div>Working</div>
+      </div>
+    </div>
+    
+    <marquee behavior="" direction="">Hello</marquee>
+  </div>

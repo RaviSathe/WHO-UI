@@ -1,0 +1,51 @@
+header{
+    width: 100%;
+    height: 50px;
+    background: black;
+    padding: 10px ;
+}
+
+.btn-list{
+    display: flex;
+    margin: 20px;
+}
+
+.btn-list div{
+    /* width: 120px; */
+    height: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-list div:hover{
+    box-shadow: 0 10px 10px rgba(0 0 0 );
+}
+
+.formAndProductList{
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form{
+    width: 35%;
+    /* background: skyblue; */
+    text-align: center;
+}
+
+form input{
+    margin: 5px;
+    padding: 5px 10px;
+    width: 300px;
+}
+
+
+
+.productList{
+    width: 65%;
+    /* background: lightcoral; */
+}

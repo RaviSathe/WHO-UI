@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+/* Custom default style for success toast */
+.toast-success {
+    background-color: #28a745 !important;  /* Green background for success */
+    color: white !important;               /* White text */
+    font-size: 16px;                       /* Set font size */
+    padding: 12px;                         /* Adjust padding */
+    border-radius: 8px;                    /* Rounded corners */
+  }
+  
+  /* Custom default style for error toast */
+  .toast-error {
+    background-color: #dc3545 !important;  /* Red background for error */
+    color: white !important;               /* White text */
+    font-size: 16px;                       /* Set font size */
+    padding: 12px;                         /* Adjust padding */
+    border-radius: 8px;                    /* Rounded corners */
+  }
+  
+  /* Custom default style for info toast */
+  .toast-info {
+    background-color: #17a2b8 !important;  /* Blue background for info */
+    color: white !important;               /* White text */
+    font-size: 16px;                       /* Set font size */
+    padding: 12px;                         /* Adjust padding */
+    border-radius: 8px;                    /* Rounded corners */
+  }
+  
+  /* Custom default style for warning toast */
+  .toast-warning {
+    background-color: #ffc107 !important;  /* Yellow background for warning */
+    color: white !important;               /* White text */
+    font-size: 16px;                       /* Set font size */
+    padding: 12px;                         /* Adjust padding */
+    border-radius: 8px;                    /* Rounded corners */
+  }
+  
+  /* Style the toast container */
+  .toast-container {
+    margin-top: 15px; /* Space between toasts */
+    z-index: 9999;    /* Make sure the toasts appear on top of other content */
+  }
+  
+  /* Style the close button */
+  .toast-close-button {
+    color: white !important;
+    font-size: 20px;
+  }
+  

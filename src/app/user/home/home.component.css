@@ -1,0 +1,11 @@
+.form{
+    /* width: 35%; */
+    /* background: skyblue; */
+    text-align: center;
+}
+
+form input{
+    margin: 5px;
+    padding: 5px 10px;
+    width: 300px;
+}

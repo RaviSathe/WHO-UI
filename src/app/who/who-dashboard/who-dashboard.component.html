@@ -1,0 +1,51 @@
+<header>
+
+</header>
+
+<div class="btn-list">
+    <div (click)="getMyProduct()">Get All Products</div>
+    <div>Add Product</div>
+    <div>up comming stock</div>
+    <div>out of stock</div>
+</div>
+
+<hr>
+
+<div class="formAndProductList">
+
+    <div class="form" >
+        <form [formGroup]="addProductForm">
+            <h4>Add Product</h4>
+            <input type="text" formControlName="productName" placeholder="Product Name"><br>
+            <input type="text" formControlName="category" placeholder="Category"><br>
+            <input type="number" formControlName="productQuantity" placeholder="Quantity"><br>
+            <input type="text" formControlName="registrationNo" readonly placeholder="Registration Number"><br>
+            <button class="btn btn-primary" (click)="addProduct()">Add Product</button>
+        </form>
+    </div>
+
+    <div class="productList">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Added On</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let data of myProductList">
+                <th scope="row">1</th>
+                <td>{{data.productName}}</td>
+                <td>{{data.category}}</td>
+                <td>{{data.productQuantity}}</td>
+                <td>{{data.addedOn}}</td>
+                <td><button type="button" class="btn btn-danger" (click)="removeMyProduct(data.id)">Remove</button></td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>

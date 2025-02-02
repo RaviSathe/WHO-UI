@@ -1,0 +1,55 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" >Annapurna</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          
+          
+        </ul>
+        <form class="d-flex" role="search">
+          <button class="btn btn-outline-success" type="submit" (click)="onLoginClick()">{{islogin === true ? 'Logout' : ''}}</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <table class="table" *ngIf="!addressTab">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product Name</th>
+        <th scope="col">Category</th>
+        <th scope="col">Product Quantity</th>
+        <th scope="col">Posted On</th>
+        <th scope="col">Registration number</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of productList">
+        <th scope="row">1</th>
+        <td>{{data.productName}}</td>
+        <td>{{data.category}}</td>
+        <td>{{data.productQuantity}}</td>
+        <td>{{data.addedOn}}</td>
+        <td>{{data.registrationNo}}</td>
+        <td><button type="button" class="btn btn-success" (click)="orderProduct(data.id)">Order</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="AddressInfoDiv" *ngIf="addressTab">
+    <div class="form" >
+        <form [formGroup]="addressForm">
+            <h4>Please Enter below Address Details</h4>
+            <input type="text" formControlName="address1" placeholder="Address lane 1"><br>
+            <input type="text" formControlName="address2" placeholder="Address lane 2"><br>
+            <input type="text" formControlName="address3" placeholder="Address lane 3"><br>
+            <input type="number" formControlName="pincode" placeholder="Pincode"><br>
+            <button class="btn btn-primary" (click)="orderAndDeletFormDatabase()">Order</button>
+        </form>
+    </div>
+  </div>

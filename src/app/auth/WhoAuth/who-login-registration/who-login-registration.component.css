@@ -1,0 +1,141 @@
+
+.landing-header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+.landing-header-left, .landing-header-right{
+    display: flex;
+}
+
+.app-logo{
+    width: 25px;
+    margin-right: 5px;
+}
+
+.app-name{
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.s-btn-white{
+    background-color: #dde2eb;
+    color: #565E6D;
+    border: none;
+    padding: 5px 20px;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.s-btn-grey{
+    background-color: #565E6D;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    font-size: 14px;
+}
+
+.login-page{
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    align-items: center;
+
+}
+
+.login-box{
+    width: 40%;
+    height: 400px;
+    text-align: center;
+    margin: auto;
+    padding: 20px 25px;
+    background: #e5e6e8;
+}
+
+
+
+.left-img{
+}
+
+.left-img img{
+    position: absolute;
+    left: -10px;
+    top: 90px;
+}
+
+.right-img img{
+}
+
+.right-img{
+    position: absolute;
+    right: 0;
+}
+
+.form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.input-tab{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    width: 100%;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.input-tab input{
+    outline: none;
+    border: none;
+    background:#F3F4F6 ;
+    padding: 5px 20px 5px 40px;
+}
+
+.input-tab label{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.input-mail{
+    position: absolute;
+    left: 22px;
+    top: 33px;
+
+}
+
+.input-lock{
+    position: absolute;
+    left: 22px;
+    top: 33px;
+}
+
+.input-hide{
+    position: absolute;
+    right: 22px;
+    top: 33px;
+}
+
+.smal-action{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.s-btn-grey{
+    background-color: #565E6D;
+    color: white;
+    border: none;
+    padding: 5px 20px;
+    font-size: 14px;
+    width: 95%;
+}
